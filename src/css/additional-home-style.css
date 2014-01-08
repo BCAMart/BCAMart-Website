@@ -8,3 +8,12 @@
 .bcam_bci {
 	width: 439px;
 }
+
+/* overriding bottom contact */
+#slide-6 {
+	height: 600px;
+}
+
+#contact-row-4 {
+	padding-top: 20px;
+}
