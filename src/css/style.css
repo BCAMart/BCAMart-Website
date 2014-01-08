@@ -305,6 +305,7 @@ body {
 	background-color: #1abc9c;
 	color: #e4e6e5;
 	padding-top: 90px;
+	height: 100%;
 }
 
 	.title-row {
@@ -441,6 +442,7 @@ body {
 	background-color: #34495e;
 	color: #e4e6e5;
 	padding-top: 90px;
+	height: 100%;
 }
 
 #slide-4 i {
@@ -460,6 +462,7 @@ body {
 	color: #e4e6e5;
 	padding-bottom: 350px;
 	padding-top: 90px;
+	height: 100%;
 }
 
 @media (max-width: 767px) {
