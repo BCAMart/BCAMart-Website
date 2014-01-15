@@ -1,0 +1,21 @@
+/* index.css
+ * homepage of BCA Mart
+ */
+
+html, body {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+}
+
+body {
+	background-color: #2f2f2f;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: block;
+	margin: 0px;
+}
