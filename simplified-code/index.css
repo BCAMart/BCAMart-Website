@@ -18,8 +18,19 @@ body {
 	min-height: 40px;
 	position: relative;
 	display: inline-block;
-	margin: 0px;
-	position: relative;
+	margin: -4px 0px 0px 0px;
+	padding: 50px 0px 50px 0px;
+}
+
+.sl_trapdoor {
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	width: 100%;
+	min-height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	
 }
 
 .sl_holder {
@@ -28,9 +39,10 @@ body {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	padding: 0px;
 }
 
-.sl_text_holder {
+.sl_text_holder, .sl_main_holder {
 	/* necessary for vertical centering */
 	display: table-cell;
 	vertical-align: middle;
@@ -67,12 +79,60 @@ body {
 }
 /* slide headers/titles */
 
-.sl_line {
+hr.sl_line {
 	/* horizontal line below title */
-	width: 400px;
+	width: 60%;
+	position: relative;
+	border: none;
 	border-top: 4px solid #f0f0f0;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.sl_choices {
+	position: relative;
+	display: block;
+	margin: 100px auto 0px auto;
+	width: calc(100% - 100px);
+	min-height: 100px;
+	padding: 10px;
+	text-align: center;
+}
+
+.sl_choice {
+	position: relative;
+	display: inline-block;
+	min-width: 100px;
+	min-height: 100px;
+	margin: 0px 55px 0px 55px;
+}
+
+.sl_choice > * {
+	transition: color 600ms, text-shadow 600ms, font-size 600ms;
+	-webkit-transition: color 600ms, text-shadow 600ms, font-size 600ms;
+}
+
+.sl_choice > *:first-child {
+	min-width: 10px;
+	min-height: 10px;
+}
+
+.sl_choice > div:first-child {
+	text-align: center;
+	font-size: 70px;
+	color: #f9f9f9;
+}
+
+.sl_choice > *:nth-child(2) {
+	font-family: Arial;
+}
+
+.sl_choice > p {
+	/* text that appears below image */
+	font-family: "Titillium Web", Arial;
+	font-size: 22px;
+	color: #f9f9f9;
+	min-width: 140px;
 }
 
 /* START specific slides */
@@ -85,7 +145,27 @@ body {
 #slide2 {
 	height: 500px;
 	background-color: #1abc9c;
-	padding-top: 50px;
-	padding-bottom: 50px;
+}
+	#slide2 .sl_choice > * {
+		text-shadow: 0px 1px 0px #0d5748;
+	}
+	#slide2 .sl_choice > *:first-child {
+		cursor: pointer;
+	}
+	#slide2 .sl_choice > *:first-child:hover {
+		color: #bfd9d3;
+	}
+	#slide2 > .sl_trapdoor {
+		background-color: #4f4f4f;
+		height: 150px;
+		box-shadow: inset 0px 4px 3px #393939;
+	}
+#slide3 {
+	height: 500px;
+	background-color: #34495e;
+}
+#slide4 {
+	height: 200px;
+	background-color: #2f2f2f;
 }
 /* END specific slides */
