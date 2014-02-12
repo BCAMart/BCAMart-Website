@@ -19,16 +19,60 @@ body {
 	position: relative;
 	display: inline-block;
 	margin: 0px;
-	background-color: #6e6e7f;
+	position: relative;
 }
 
-.sl_title {
+.sl_holder {
+	/* necessary for vertical centering */
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.sl_text_holder {
+	/* necessary for vertical centering */
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.sl_text {
+	/* slide text */
 	width: 70%;
 	min-height: 20px;
-	position: absolute;
 	left: 15%;
-	top: 50%;
-	background-color: red;
+	display: block;
+	position: relative;
+}
+
+/* slide headers/titles */
+.sl_text > h1 {
+	font-family: "Titillium Web", Arial;
+	font-size: 48px;
+	color: #f0f0f0;
+	text-align: center;
+}
+
+.sl_text > h1 > span.normal,
+.sl_text > h1.normal {
+	font-weight: normal;
+}
+
+.sl_text > h2 {
+	font-family: "Titillium Web", Arial;
+	font-size: 32px;
+	color: #f0f0f0;
+	text-align: center;
+	font-weight: normal;
+}
+/* slide headers/titles */
+
+.sl_line {
+	/* horizontal line below title */
+	width: 400px;
+	border-top: 4px solid #f0f0f0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* START specific slides */
@@ -37,5 +81,11 @@ body {
 	height: 700px;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+}
+#slide2 {
+	height: 500px;
+	background-color: #1abc9c;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 /* END specific slides */
