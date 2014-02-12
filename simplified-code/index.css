@@ -23,14 +23,12 @@ body {
 }
 
 .sl_trapdoor {
-	position: absolute;
+	position: relative;
 	display: block;
-	bottom: 0px;
 	width: 100%;
-	min-height: 100px;
+	min-height: 40px;
 	margin-left: auto;
 	margin-right: auto;
-	
 }
 
 .sl_holder {
@@ -143,8 +141,9 @@ hr.sl_line {
 	background-repeat: no-repeat;
 }
 #slide2 {
-	height: 500px;
+	height: 600px;
 	background-color: #1abc9c;
+	padding-bottom: 0px;
 }
 	#slide2 .sl_choice > * {
 		text-shadow: 0px 1px 0px #0d5748;
@@ -155,9 +154,9 @@ hr.sl_line {
 	#slide2 .sl_choice > *:first-child:hover {
 		color: #bfd9d3;
 	}
-	#slide2 > .sl_trapdoor {
+	#slide2 > .sl_holder > .sl_trapdoor {
 		background-color: #4f4f4f;
-		height: 150px;
+		height: 180px;
 		box-shadow: inset 0px 4px 3px #393939;
 	}
 #slide3 {
