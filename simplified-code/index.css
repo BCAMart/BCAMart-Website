@@ -159,6 +159,7 @@ hr.sl_line {
 }
 
 .sl_choice > * {
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
 	transition: color 600ms, text-shadow 600ms, font-size 600ms;
 }
 
@@ -201,9 +202,6 @@ hr.sl_line {
 	background-color: #1abc9c;
 	padding-bottom: 0px;
 }
-	#slide2 .sl_choice > * {
-		text-shadow: 0px 1px 0px #0d5748;
-	}
 	#slide2 .sl_choice > *:first-child {
 		cursor: pointer;
 	}
