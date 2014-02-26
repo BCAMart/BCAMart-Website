@@ -15,9 +15,10 @@ var Choices = new function() {
 	this.show = new function() {
 		// private
 		var _s = this;
+		var timer;
 		
 		function showBar() {
-			if (bar.css("height") != "0px") return;
+			if (bar.css("height") != "0px" || timer) return;
 			bar.css("display", "block");
 			bar.css("height", "223px");
 		}
@@ -25,7 +26,10 @@ var Choices = new function() {
 		function hideBar() {
 			if (bar.css("height") == "0px") return;
 			bar.css("height", "0px");
-			setTimeout(function() { bar.css("display", "none"); });
+			timer = setTimeout(function() {
+				bar.css("display", "none");
+				clearTimeout(timer);
+			}, 1000);
 		}
 		
 		/* show our food choices */
