@@ -47,14 +47,21 @@ var Choices = new function() {
 				(typeof func == "function" ? showBar(func) : showBar());
 		}
 		
+		function selectType(name) {
+			$(".sl_trapdoor > div.slt_holder").css("display", "none");
+			$(".sl_trapdoor > div.slt_holder[type="+name+"]").css("display", "inline-block");
+		}
+		
 		/* show our food choices */
 		this.food = function() {
+			selectType("food");
 			toggleBar();
 		};
 		
 		/* show our drinks */
 		this.drinks = function() {
-			
+			selectType("drinks");
+			toggleBar();
 		};
 		
 		/* show our available clothing */
