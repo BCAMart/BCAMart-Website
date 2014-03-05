@@ -15,10 +15,18 @@ var Choices = new function() {
 	this.show = new function() {
 		// private
 		var _s = this;
-		var timer;
+		var timer = 0, sTimer = 0;
 		
-		function showBar() {
-			if (bar.css("height") != "0px" || timer) return;
+		function showBar(func) {
+			// func - callback function
+			if (bar.css("height") != "0px") return;
+			if (typeof func == "function") {
+				clearTimeout(sTimer);
+				sTimer = setTimeout(function() {
+					func();
+					sTimer = 0;
+				}, 1000); // delay = 1s
+			}
 			bar.css("display", "block");
 			bar.css("height", "223px");
 		}
@@ -26,19 +34,27 @@ var Choices = new function() {
 		function hideBar() {
 			if (bar.css("height") == "0px") return;
 			bar.css("height", "0px");
+			clearTimeout(timer);
 			timer = setTimeout(function() {
 				bar.css("display", "none");
-				clearTimeout(timer);
+				timer = 0;
 			}, 1000);
+		}
+		
+		function toggleBar(func) {
+			// func - our function to call when showing the bar
+			(bar.css("height") != "0px" || timer) ? hideBar() : 
+				(typeof func == "function" ? showBar(func) : showBar());
 		}
 		
 		/* show our food choices */
 		this.food = function() {
-			showBar();
+			toggleBar();
 		};
 		
 		/* show our drinks */
 		this.drinks = function() {
+			
 		};
 		
 		/* show our available clothing */
