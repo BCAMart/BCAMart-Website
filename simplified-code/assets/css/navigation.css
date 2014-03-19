@@ -27,6 +27,7 @@
 	display: inline-block;
 }
 
+/*
 #top_bar > .tb_item:after {
 	display: block;
 	width: 100%;
@@ -35,6 +36,7 @@
 	margin-top: 10px;
 	background-color: #4e4e4e;
 }
+*/
 
 .tb_item > span {
 	vertical-align: middle;
@@ -49,4 +51,12 @@
 	background-color: #7e7e7e;
 }
 
-
+#top_bar > #tb_slide {
+	position: absolute;
+	margin: 28px auto 0px auto; /* set margin-left on init */
+	height: 5px;
+	width: 100px;
+	display: block;
+	background-color: rgba(46,46,46,0.8);
+	transition: margin-left 300ms;
+}

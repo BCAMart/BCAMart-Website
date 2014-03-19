@@ -87,4 +87,8 @@ window.onload = function() {
 	for (var i=0, name=""; i<buttons.size(); i++)
 		if (typeof (name=$(buttons[i]).parent().attr("name")) != "undefined")
 			buttons[i].onclick = Choices.show[name];
+	
+	// initialize page navigation
+	Navigation.init($("#top_bar > #tb_slide"), $(".slide"), $("#top_bar > .tb_item"));
+	$(window).scroll(Navigation.move);
 };
