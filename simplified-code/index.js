@@ -6,7 +6,7 @@
 var Choices = new function() {
 	// private
 	var _ = this;
-	var bar;
+	var bar, selected = ""; // selected is a named type
 	
 	this.init = function() {
 		bar = $("#slide2 > .sl_holder > .sl_trapdoor");
@@ -48,28 +48,33 @@ var Choices = new function() {
 		}
 		
 		function selectType(name) {
+			selected = name;
 			$(".sl_trapdoor > div.slt_holder").css("display", "none");
 			$(".sl_trapdoor > div.slt_holder[type="+name+"]").css("display", "inline-block");
 		}
 		
 		/* show our food choices */
 		this.food = function() {
-			selectType("food");
-			toggleBar();
+			if (selected == "food" || selected == "") toggleBar();
+			if (selected != "food") selectType("food");
 		};
 		
 		/* show our drinks */
 		this.drinks = function() {
-			selectType("drinks");
-			toggleBar();
+			if (selected == "drinks" || selected == "") toggleBar();
+			if (selected != "drinks") selectType("drinks");
 		};
 		
 		/* show our available clothing */
 		this.clothing = function() {
+			if (selected == "clothing" || selected == "") toggleBar();
+			if (selected != "clothing") selectType("clothing");
 		};
 		
 		/* show our supplies */
 		this.supplies = function() {
+			if (selected == "supplies" || selected == "") toggleBar();
+			if (selected != "supplies") selectType("supplies");
 		};
 	}
 };

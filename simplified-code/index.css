@@ -10,7 +10,6 @@ html, body {
 
 body {
 	background-color: #2f2f2f;
-	min-height: 3000px; /* for testing purposes */
 }
 
 .slide {
@@ -126,7 +125,7 @@ hr.sl_line {
 	width: 60%;
 	position: relative;
 	border: none;
-	border-top: 4px solid #f0f0f0;
+	border-top: 4px solid rgba(240,240,240,0.5);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -148,25 +147,24 @@ hr.sl_line {
 	min-height: 100px;
 	vertical-align: bottom;
 	margin: 0px 55px 0px 55px;
+	padding: 4px;
 }
 
 .sl_choice > * {
 	text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
 	transition: color 600ms, text-shadow 600ms, font-size 600ms;
+	display: inline;
 }
 
-.sl_choice > *:first-child {
+.sl_choice > .choice_icon {
 	min-width: 10px;
 	min-height: 10px;
-}
-
-.sl_choice > div:first-child {
 	text-align: center;
 	font-size: 70px;
 	color: #f9f9f9;
 }
 
-.sl_choice > p:nth-child(2) {
+.sl_choice > p.choice_descr {
 	/* text that appears below image */
 	/* usually, this is our nth-child(2) */
 	font-family: Titillium;
@@ -174,12 +172,11 @@ hr.sl_line {
 	color: #f9f9f9;
 	font-style: normal;
 	font-weight: normal;
-	max-width: 160px;
 	margin: 10px auto 0px auto;
-}
-
-.sl_choice > p.choice_descr:nth-child(2) {
 	font-weight: 100;
+	max-width: 200px;
+	word-break: break-all;
+	display: inline-block;
 }
 
 .sl_trapdoor {
@@ -189,8 +186,8 @@ hr.sl_line {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: hidden;
 	text-align: center;
+	overflow: hidden;
 }
 	.sl_trapdoor > div.slt_holder {
 		position: relative;
@@ -198,14 +195,15 @@ hr.sl_line {
 		height: 100%;
 		min-width: 10px;
 		text-align: left;
+		overflow-y: scroll;
+		
 	}
 
 .sl_trapdoor > div.slt_holder > .sl_trapdoor_item {
 	/* within our trapdoor centering div */
 	height: 130px;
 	min-width: 140px;
-	top: 50%;
-	margin: -70px 0px 0px 50px;
+	margin: 40px 0px 0px 50px;
 	float: left;
 	clear: none;
 	position: relative;
@@ -259,11 +257,14 @@ hr.sl_line {
 	padding-bottom: 0px;
 	min-height: 540px;
 }
-	#slide2 .sl_choice > *:first-child {
+	#slide2 .sl_choice > .choice_icon {
 		cursor: pointer;
 	}
-	#slide2 .sl_choice > *:first-child:hover {
+	#slide2 .sl_choice > .choice_icon:hover {
 		color: #bfd9d3;
+	}
+	#slide2 .sl_choice > .choice_descr {
+		font-weight: 300;
 	}
 	#slide2 > .sl_holder > .sl_trapdoor {
 		background-color: #4f4f4f;
@@ -276,7 +277,10 @@ hr.sl_line {
 	background-color: #34495e;
 }
 #slide4 {
-	height: 200px;
+	height: 400px;
 	background-color: #2f2f2f;
 }
+	#slide4 .sl_choice {
+		min-width: 200px;
+	}
 /* END specific slides */
