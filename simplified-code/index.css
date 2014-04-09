@@ -225,7 +225,7 @@ hr.sl_line {
 				0px 0px 15px #535353;
 }
 	.sl_trapdoor > div.slt_holder > .sl_trapdoor_item > img {
-		width: calc(100% - 50px);
+		width: 90px;
 		height: 90px;
 		display: inline-block;
 		margin-top: 15px;
