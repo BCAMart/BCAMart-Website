@@ -229,7 +229,7 @@ hr.sl_line {
 		height: 90px;
 		display: inline-block;
 		margin-top: 15px;
-		background-color: red;
+		background-color: none;
 		border: none;
 	}
 	.sl_trapdoor > div.slt_holder > .sl_trapdoor_item > p {
