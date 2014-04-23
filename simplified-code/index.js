@@ -28,7 +28,7 @@ var Choices = new function() {
 				}, 1000); // delay = 1s
 			}
 			bar.css("display", "block");
-			bar.css("height", "223px");
+			bar.css("height", "500px");
 		}
 		
 		function hideBar() {
