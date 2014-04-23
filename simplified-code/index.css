@@ -201,8 +201,9 @@ hr.sl_line {
 
 .sl_trapdoor > div.slt_holder > .sl_trapdoor_item {
 	/* within our trapdoor centering div */
-	height: 130px;
+	height: 150px;
 	min-width: 140px;
+	max-width: 20%;
 	margin: 40px 0px 0px 50px;
 	float: left;
 	clear: none;
@@ -233,7 +234,7 @@ hr.sl_line {
 		border: none;
 	}
 	.sl_trapdoor > div.slt_holder > .sl_trapdoor_item > p {
-		margin-top: 10px;
+		margin-top: 2px;
 		height: 18px;
 		min-width: calc(100% - 10px - 20px);
 		font-family: Titillium, Arial;
@@ -256,7 +257,7 @@ hr.sl_line {
 #slide2 {
 	background-color: #1abc9c;
 	padding-bottom: 0px;
-	min-height: 87%;
+	min-height: 100%;
 }
 	#slide2 .sl_choice > .choice_icon {
 		cursor: pointer;
@@ -276,7 +277,7 @@ hr.sl_line {
 	}
 #slide3 {
 	background-color: #34495e;
-	height: 80%
+	height: 100%
 }
 #slide4 {
 	height: 80%;
